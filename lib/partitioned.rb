@@ -1,6 +1,6 @@
 require 'monkey_patch_activerecord'
 require 'monkey_patch_postgres'
-require 'monkey_patch_redshift'
+#require 'monkey_patch_redshift'
 
 require 'partitioned/active_record_overrides'
 require 'partitioned/partitioned_base/configurator.rb'
