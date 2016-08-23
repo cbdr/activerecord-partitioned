@@ -97,7 +97,7 @@ module Partitioned
           FROM pg_tables
           WHERE schemaname = '#{configurator.schema_name}'
           #{order_by_clause.nil? ? "" : "ORDER BY " + order_by_clause}
-          LIMIT 1
+          LIMIT #{how_many}
         SQL
         return find_by_sql(query).map(&:tablename)
       end
